@@ -1,0 +1,17 @@
+version: "3.7"
+services:
+  frps:
+    build: .
+    image: c521wy/frps
+    ports: 
+      - 80:80/tcp
+      - 443:443/tcp
+      - 7000:7000/tcp
+      - 7001:7001/tcp
+    environment: 
+      - FRPS_BIND_PORT=7000
+      - FRPS_DASHBOARD_PORT=7001
+      - FRPS_DASHBOARD_USER=admin
+      - FRPS_DASHBOARD_PASS=admin
+      - FRPS_SUBDOMAIN_HOST=frp.example.com
+      - FRPS_TOKEN=1234567890
