@@ -1,7 +1,7 @@
 FROM alpine
 
 ARG ARG_FRP_VERSION="0.31.1" 
-ARG ARG_FRP_DOWNLOAD_URL="https://github.com/fatedier/frp/releases/download/v0.31.1/frp_${ARG_FRP_VERSION}_linux_amd64.tar.gz"
+ARG ARG_FRP_DOWNLOAD_URL="https://github.com/fatedier/frp/releases/download/v${ARG_FRP_VERSION}/frp_${ARG_FRP_VERSION}_linux_amd64.tar.gz"
 
 RUN set -xu && \
     wget ${ARG_FRP_DOWNLOAD_URL} && \
